@@ -7,11 +7,17 @@ const PORT = process.env.PORT || 3000;
 app.use(compression());
 app.use(express.static(__dirname + '/dist'));
 
+app.all('*', (req, res, next) => {
+    if(req.headers['x-forwarded-proto'] != 'https') {
+        res.redirect('https://' + req.hostname + req.url)
+    } else {
+        next();
+    }
+})
+
 app.get('/', (req, res) => {
-    if (req.headers['x-forwarded-proto'] === 'https') {
             res.sendFile('index.html');
-    };
-    res.redirect('https://' + req.hostname + req.url)
+
 })
 
 app.get('/api/get/*', (req, res) => {
