@@ -131,7 +131,7 @@ class Splash extends Component {
         <Row className='container'>
           {this.state.sources.map((source, i) => {
             return (
-              <Col xs={12} lg={3} sm={6} md={6} className={(i === 1) ? 'outer-div left-div' : (i === 4) ? 'outer-div right-div' : 'outer-div'}>
+              <Col xs={12} lg={3} sm={6} md={6} className={(i === 0) ? 'outer-div left-div' : (i === 3) ? 'outer-div right-div' : 'outer-div'}>
                 <Source source={source} label = {label[i]} />
               </Col>
             )
