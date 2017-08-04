@@ -1,6 +1,6 @@
 {
-    "short_name": "Filler Name",
-    "name": "Your App's Name Here",
+    "short_name": "News Aggregator",
+    "name": "News Aggregator",
     "icons": [
         {
             "src": "icon-192x192.png",
@@ -8,7 +8,7 @@
             "type": "image/png"
         },
         {
-            "src": "icon-192x192.png",
+            "src": "icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
